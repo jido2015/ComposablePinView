@@ -24,7 +24,7 @@ import com.olajide.pinviewscreen.ui.theme.BlinxAppTheme
 import com.olajide.pinviewscreen.ui.theme.Typography
 
 @Composable
-fun ComposablePinInput(
+fun ComposablePinView(
     charLimit: Int,
     textStyle: TextStyle = TextStyle(),
     value: MutableState<String>,
@@ -123,6 +123,6 @@ fun DefaultPreview() {
     BlinxAppTheme {
         val pin = remember{ mutableStateOf("") }
 
-        ComposablePinInput( charLimit =4,value=pin)
+        ComposablePinView( charLimit =4,value=pin)
     }
 }
