@@ -60,7 +60,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.jido2015'
                 artifactId = 'Compose-PinView'
-                version = '1.0.0'
+                version = '1.0.3'
             }
         }
     }
