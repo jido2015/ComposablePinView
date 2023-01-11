@@ -26,6 +26,7 @@ import com.olajide.pinviewscreen.ui.theme.Typography
 @Composable
 fun ComposablePinView(
     charLimit: Int,
+    text: String = String(),
     textStyle: TextStyle = TextStyle(),
     value: MutableState<String>,
 ) {
@@ -55,7 +56,7 @@ fun ComposablePinView(
 
             Text(
                 modifier = Modifier.align(Alignment.CenterHorizontally),
-                text = "Passcode",
+                text = text,
                 style = textStyle,
                 textAlign = TextAlign.Start
             )
