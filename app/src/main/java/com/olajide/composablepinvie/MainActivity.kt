@@ -8,21 +8,30 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.olajide.composablepinvie.ui.theme.ComposablePinVieTheme
+import com.olajide.pinviewscreen.presentation.ComposablePinView
 
 class MainActivity : ComponentActivity() {
+    private val charLimit = 6
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ComposablePinVieTheme {
+                val pin = remember{ mutableStateOf("") }
+
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+
+                    ComposablePinView(
+                        charLimit = charLimit, value = pin)
                 }
             }
         }

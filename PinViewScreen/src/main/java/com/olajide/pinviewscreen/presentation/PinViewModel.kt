@@ -75,8 +75,7 @@ class PinViewModel: ViewModel() {
 
         when(state.pin.length){
             state.pinLimit -> {
-
-                state = state.copy(pin = state.pin.removeRange(0..3))
+                state = state.copy(pin = state.pin.removeRange(0 until state.pinLimit))
                 for (i in 0 until state.pinLimit){
                     dotsCurrentState.add(false)
                 }
