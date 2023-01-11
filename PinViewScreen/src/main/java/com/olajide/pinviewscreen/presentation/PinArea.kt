@@ -56,7 +56,7 @@ fun ComposablePinView(
             Text(
                 modifier = Modifier.align(Alignment.CenterHorizontally),
                 text = "Passcode",
-                style = Typography.labelMedium,
+                style = textStyle,
                 textAlign = TextAlign.Start
             )
 
