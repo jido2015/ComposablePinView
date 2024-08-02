@@ -1,4 +1,4 @@
-package com.olajide.pinviewscreen.presentation
+package com.olajide.pinviewscreen.ui.presentation
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape

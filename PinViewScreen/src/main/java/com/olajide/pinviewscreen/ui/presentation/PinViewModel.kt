@@ -1,9 +1,11 @@
-package com.olajide.pinviewscreen.presentation
+package com.olajide.pinviewscreen.ui.presentation
 
 import android.util.Log
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.olajide.pinviewscreen.data.PinActions
@@ -14,7 +16,7 @@ class PinViewModel: ViewModel() {
     var state by mutableStateOf(PinState())
     private set
 
-    var dotsCurrentState = ArrayList<Boolean>()
+    var dotsCurrentState = mutableStateListOf<Boolean>()
     private set
 
     fun onAction(action: PinActions){
@@ -47,7 +49,7 @@ class PinViewModel: ViewModel() {
 
     }
 
-     fun setDefaultDotState(limit: Int):ArrayList<Boolean>{
+     fun setDefaultDotState(limit: Int): SnapshotStateList<Boolean> {
          Log.d("setDefaultDotState1",limit.toString())
 
          viewModelScope.launch {

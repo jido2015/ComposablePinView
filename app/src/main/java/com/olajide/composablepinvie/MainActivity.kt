@@ -11,9 +11,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.olajide.composablepinvie.ui.theme.ComposablePinVieTheme
-import com.olajide.pinviewscreen.presentation.ComposablePinView
+import com.olajide.pinviewscreen.ui.presentation.ComposablePinView
 
 class MainActivity : ComponentActivity() {
     private val charLimit = 6
@@ -31,6 +34,7 @@ class MainActivity : ComponentActivity() {
                 ) {
 
                     ComposablePinView(
+                        textStyle = TextStyle(fontSize = 20.sp),
                         charLimit = charLimit, value = pin)
                 }
             }

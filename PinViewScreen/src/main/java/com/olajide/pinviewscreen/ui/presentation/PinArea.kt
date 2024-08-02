@@ -1,4 +1,4 @@
-package com.olajide.pinviewscreen.presentation
+package com.olajide.pinviewscreen.ui.presentation
 
 import android.os.Build
 import androidx.annotation.RequiresApi
