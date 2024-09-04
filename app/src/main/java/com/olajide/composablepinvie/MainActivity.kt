@@ -18,7 +18,6 @@ import com.olajide.composablepinvie.ui.theme.ComposablePinVieTheme
 import com.olajide.pinviewscreen.ui.presentation.ComposablePinView
 
 class MainActivity : ComponentActivity() {
-    private val charLimit = 6
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +32,8 @@ class MainActivity : ComponentActivity() {
                 ) {
 
                     ComposablePinView(
-                        textStyle = TextStyle(fontSize = 20.sp),
-                        charLimit = charLimit, value = pin)
+                        textStyle = TextStyle(fontSize = 30.sp),
+                        charLimit = 4, value = pin)
                 }
             }
         }

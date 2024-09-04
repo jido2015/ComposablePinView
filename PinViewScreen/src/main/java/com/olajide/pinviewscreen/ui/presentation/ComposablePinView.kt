@@ -45,13 +45,13 @@ fun ComposablePinView(
             modifier = Modifier
                 .padding(start = 40.dp, end = 40.dp)
                 .fillMaxWidth()
-                .align(Alignment.BottomCenter),
+                .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             Spacer(modifier = Modifier.size(20.dp))
 
             //Setting Up List of Dots for pin
-            LazyPinRow(charLimit, viewModel)
+            PinDots(charLimit, viewModel)
 
             Text(
                 modifier = Modifier.align(Alignment.CenterHorizontally),
@@ -67,21 +67,18 @@ fun ComposablePinView(
 }
 
 @Composable
-fun LazyPinRow(charLimit: Int, viewModel: PinViewModel) {
+fun PinDots(charLimit: Int, viewModel: PinViewModel) {
     LazyRow(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier
             .clip(CircleShape)
             .fillMaxWidth()
-            // .background(Color(0xFFEEEEEE))
             .padding(10.dp)
     ) {
 
         items(charLimit) { dots ->
-            run {
-                Dot(viewModel.returnDotPosition(dots))
-            }
+            Dot(viewModel.returnDotPosition(dots))
         }
     }
 }
